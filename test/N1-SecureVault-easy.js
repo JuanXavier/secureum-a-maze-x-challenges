@@ -1,5 +1,4 @@
 const { expect } = require('chai')
-const { BigNumber } = require('ethers')
 const { ethers } = require('hardhat')
 
 // run the test
@@ -29,7 +28,7 @@ describe('CTF #1 SecureVault', function () {
 
     // Get the password as a string number
     password = String(
-      BigNumber.from(
+      BigInt(
         ethers.utils.keccak256(
           ethers.utils.solidityPack(['uint256', 'uint256'], [secret, contractBalance])
         )
