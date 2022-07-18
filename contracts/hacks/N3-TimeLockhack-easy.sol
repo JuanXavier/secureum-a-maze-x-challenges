@@ -12,7 +12,6 @@ contract N3TimeLockHack {
     address private _owner;
 
     constructor(address N3addr) public payable {
-        // Complete this with your own code
         challenge = N3TimeLock(N3addr);
         _owner = msg.sender;
 
